@@ -1,0 +1,1 @@
+// File ini digunakan untuk konfigurasi global atau custom commands.
