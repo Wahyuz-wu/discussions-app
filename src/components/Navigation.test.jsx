@@ -24,15 +24,15 @@ describe('Navigation component', () => {
 
   // Skenario: Tampilan saat user sudah login
   it('harus merender profil user dan tombol Logout jika authUser tidak null', () => {
-    const fakeUser = { 
-      id: 'user-1', 
-      name: 'Wahyu', 
-      avatar: 'https://ui-avatars.com/api/?name=Wahyu' 
+    const fakeUser = {
+      id: 'user-1',
+      name: 'Wahyu',
+      avatar: 'https://ui-avatars.com/api/?name=Wahyu'
     };
-    
+
     const mockDispatch = vi.fn();
     vi.mocked(reactRedux.useDispatch).mockReturnValue(mockDispatch);
-    
+
     renderComponent(fakeUser);
 
     expect(screen.getByText('Wahyu')).toBeInTheDocument();

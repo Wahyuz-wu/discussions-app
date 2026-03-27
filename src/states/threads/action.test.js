@@ -14,7 +14,7 @@ describe('asyncPopulateUsersAndThreads thunk', () => {
   it('harus men-dispatch action dengan data yang benar ketika sukses', async () => {
     const fakeUsers = [{ id: 'user-1', name: 'Wahyu' }];
     const fakeThreads = [{ id: 'thread-1', title: 'Judul' }];
-    
+
     api.getAllUsers = vi.fn().mockResolvedValue(fakeUsers);
     api.getAllThreads = vi.fn().mockResolvedValue(fakeThreads);
     const dispatch = vi.fn();
@@ -24,6 +24,6 @@ describe('asyncPopulateUsersAndThreads thunk', () => {
     expect(dispatch).toHaveBeenCalledWith(showLoading());
     expect(api.getAllUsers).toHaveBeenCalled();
     expect(api.getAllThreads).toHaveBeenCalled();
-    expect(dispatch).toHaveBeenCalledWith(hideLoading()); 
+    expect(dispatch).toHaveBeenCalledWith(hideLoading());
   });
 });

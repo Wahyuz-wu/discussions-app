@@ -52,11 +52,11 @@ describe('CreateThreadPage component', () => {
   // Skenario: Menangani form submit untuk membuat thread baru
   it('harus memanggil fungsi dispatch dengan asyncAddThread ketika tombol submit ditekan', async () => {
     renderComponent();
-    
+
     const titleInput = screen.getByPlaceholderText('Judul');
     const categoryInput = screen.getByPlaceholderText('Kategori');
-    const bodyInput = screen.getByPlaceholderText('Isi diskusi...'); 
-    
+    const bodyInput = screen.getByPlaceholderText('Isi diskusi...');
+
     const submitButton = screen.getByRole('button', { name: 'Buat Thread' });
 
     await userEvent.type(titleInput, 'Judul Baru');

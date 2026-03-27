@@ -13,11 +13,11 @@ describe('asyncSetAuthUser thunk', () => {
   it('harus men-dispatch action yang tepat ketika login berhasil', async () => {
     const fakeToken = 'fake-token';
     const fakeAuthUser = { id: 'user-1', name: 'Wahyu' };
-    
+
     api.login = vi.fn().mockResolvedValue(fakeToken);
     api.putAccessToken = vi.fn();
     api.getOwnProfile = vi.fn().mockResolvedValue(fakeAuthUser);
-    
+
     const dispatch = vi.fn();
 
     await asyncSetAuthUser({ email: 'pop@gmail.com', password: 'pop123' })(dispatch);
