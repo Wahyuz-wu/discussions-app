@@ -18,7 +18,8 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install dependencies and run test
+      - name: Install dependencies, browser and run test
         run: |
           npm install --legacy-peer-deps
+          npx playwright install chromium --with-deps
           npm run ci:test
