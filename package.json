@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -13,7 +13,7 @@
     "build-storybook": "storybook build",
     "cypress:open": "cypress open",
     "e2e": "cypress run",
-    "ci:test": "vitest --no-watch && start-server-and-test dev http-get://127.0.0.1:5173 e2e"
+    "ci:test": "vitest --no-watch && start-server-and-test dev http-get://localhost:5173 e2e"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
